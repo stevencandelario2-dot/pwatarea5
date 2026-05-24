@@ -1,16 +1,13 @@
 <?php
-// Conexión a la base de datos
-$host = "localhost";
-$usuario = "root";
-$password = "";
-$base_datos = "biblioteca_ube";
+$host = "sql303.infinityfree.com";
+$user = "if0_41933437";
+$pass = "pJVAsMllKHZAGR";
+$db   = "if0_41933437_biblioteca";
 
-$conn = mysqli_connect($host, $usuario, $password, $base_datos);
+$conn = mysqli_connect($host, $user, $pass, $db);
 
-// Verificar conexión
 if (!$conn) {
     die("Error de conexión: " . mysqli_connect_error());
 }
-// Configurar codificación a UTF-8 para evitar problemas con tildes
-$conn->set_charset("utf8");
+mysqli_set_charset($conn, "utf8");
 ?>
